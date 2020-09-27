@@ -65,7 +65,7 @@ self.addEventListener('fetch', function (e) {
         //log URL to console and return resource from cache
         console.log('responding with cache : ' + e.request.url)
         return request
-        //otherwise the resource will be retrieved normally.
+        //otherwise the resource will be fetched from the network.
       } else {
         console.log('file is not cached, fetching : ' + e.request.url)
         return fetch(e.request)
